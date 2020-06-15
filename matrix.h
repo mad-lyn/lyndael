@@ -2,14 +2,14 @@
 #define LYNDAEL_REPO_MATRIX_H
 #include <string>
 
-class matrix {
+class Matrix {
 private:
-    short int rows,columns;
+    short unsigned int rows,columns;
     std::string content;
 public:
-    matrix();
+    Matrix();
+    Matrix(short unsigned int r, short unsigned int c, std::string con);
     void print();
-
 };
 
 

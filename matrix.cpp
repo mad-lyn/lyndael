@@ -1,8 +1,19 @@
 #include<iostream>
 #include "matrix.h"
 
-matrix::matrix() : rows(1), columns(1), content("a"){};
+Matrix::Matrix() : rows(1), columns(1), content("a"){}
 
-void matrix::print(){
-    std::cout << content << '\n';
+Matrix::Matrix(short unsigned int r, short unsigned int c, std::string con){
+    rows = r;
+    columns = c;
+    content = con;
+}
+
+void Matrix::print(){
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < columns; j++){
+            std::cout << content[i*4+j] << " ";
+        }
+        std::cout << "\n";
+    }
 }
