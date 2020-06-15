@@ -9,6 +9,9 @@ private:
 public:
     Matrix();
     Matrix(short unsigned int r, short unsigned int c, std::string con);
+    void set_content(std::string n_cont);
+    char& operator [](int);
+    Matrix& operator + (Matrix &obj);
     void print();
 };
 
